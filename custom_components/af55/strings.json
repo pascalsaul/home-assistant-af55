@@ -1,0 +1,70 @@
+{
+  "title": "WNC AF55",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to WNC AF55",
+        "description": "Enter the local AF55 address and administrator credentials.",
+        "data": {
+          "host": "Host or IP address",
+          "username": "Username",
+          "password": "Password",
+          "verify_ssl": "Verify TLS certificate"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reauthenticate WNC AF55",
+        "description": "Enter the current administrator password.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to the AF55.",
+      "invalid_auth": "The username or password is invalid.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This AF55 is already configured.",
+      "reauth_successful": "Reauthentication was successful."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "WNC AF55 options",
+        "data": {
+          "scan_interval": "Polling interval in seconds",
+          "verify_ssl": "Verify TLS certificate"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "connection_type": {"name": "Connection type"},
+      "nr_rsrp": {"name": "NR RSRP"},
+      "nr_rsrq": {"name": "NR RSRQ"},
+      "lte_rsrp": {"name": "LTE RSRP"},
+      "lte_rsrq": {"name": "LTE RSRQ"},
+      "signal_strength": {"name": "Signal strength"},
+      "public_ipv4": {"name": "Public IPv4"},
+      "apn": {"name": "APN"},
+      "provider": {"name": "Provider"},
+      "radio_mode": {"name": "Radio mode"},
+      "connection_duration": {"name": "Mobile session duration"},
+      "session_start": {"name": "Mobile session start"},
+      "last_public_ip_change": {"name": "Last public IP change"},
+      "signal_quality": {"name": "Signal quality"}
+    },
+    "binary_sensor": {
+      "connected": {"name": "Connected"},
+      "connected_5g": {"name": "Connected to 5G"},
+      "roaming": {"name": "Roaming"}
+    },
+    "button": {
+      "reboot": {"name": "Reboot modem"}
+    }
+  }
+}
