@@ -1,0 +1,27 @@
+{
+  "title": "WNC AF55",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Verbinden met WNC AF55",
+        "description": "Vul het lokale AF55-adres en de beheerdersgegevens in.",
+        "data": {"host": "Hostnaam of IP-adres", "username": "Gebruikersnaam", "password": "Wachtwoord", "verify_ssl": "TLS-certificaat controleren"}
+      },
+      "reauth_confirm": {
+        "title": "WNC AF55 opnieuw authenticeren",
+        "description": "Vul het actuele beheerderswachtwoord in.",
+        "data": {"password": "Wachtwoord"}
+      }
+    },
+    "error": {"cannot_connect": "Kan geen verbinding maken met de AF55.", "invalid_auth": "De gebruikersnaam of het wachtwoord is ongeldig.", "unknown": "Onverwachte fout."},
+    "abort": {"already_configured": "Deze AF55 is al geconfigureerd.", "reauth_successful": "Opnieuw authenticeren is gelukt."}
+  },
+  "options": {"step": {"init": {"title": "WNC AF55-opties", "data": {"scan_interval": "Uitleesinterval in seconden", "verify_ssl": "TLS-certificaat controleren"}}}},
+  "entity": {
+    "sensor": {
+      "connection_type": {"name": "Verbindingstype"}, "nr_rsrp": {"name": "NR RSRP"}, "nr_rsrq": {"name": "NR RSRQ"}, "lte_rsrp": {"name": "LTE RSRP"}, "lte_rsrq": {"name": "LTE RSRQ"}, "signal_strength": {"name": "Signaalsterkte"}, "public_ipv4": {"name": "Publiek IPv4"}, "apn": {"name": "APN"}, "provider": {"name": "Provider"}, "radio_mode": {"name": "Radiomodus"}, "connection_duration": {"name": "Mobiele sessieduur"}, "session_start": {"name": "Start mobiele sessie"}, "last_public_ip_change": {"name": "Laatste wijziging publiek IP"}, "signal_quality": {"name": "Signaalkwaliteit"}
+    },
+    "binary_sensor": {"connected": {"name": "Verbonden"}, "connected_5g": {"name": "Verbonden met 5G"}, "roaming": {"name": "Roaming"}},
+    "button": {"reboot": {"name": "Herstart modem"}}
+  }
+}
